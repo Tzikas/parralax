@@ -1,0 +1,42 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="../jquery-1.11.1.min.js"></script>
+	<title>Animation Library - Download Golfer 2</title>
+<style>
+    body{margin:0px;background:lightgreen;}
+    p{font-size:10pt;}
+    h3{background:#31639C; color:white; padding:5px; font-size:13px; font-family:arial;}
+	#golfer{height:300px;}
+	#ball{position:fixed}
+</style>
+</head>
+<body>
+
+<div id="clickme">
+  Click here
+</div>
+
+    <div style='padding:20px;'>
+        <img id="golfer" src='http://www.gifs.net/Animation11/Sports/Golf/Golfer_2.gif' Alt='Golfer 2'> 
+	<img id="ball" src="images/ball.png">
+</div>
+</body>
+<script>
+$( "#clickme" ).click(function() {
+	console.log('click');
+  $( "#golfer" ).animate({
+	marginLeft: '-10000px'
+   }, 5000, function() {
+ 	$('#ball').animate({
+	marginLeft: '10000px'
+	}, 2000)   
+  });
+
+});
+</script>
+
+
+</html>
+
